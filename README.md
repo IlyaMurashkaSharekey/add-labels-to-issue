@@ -1,5 +1,5 @@
-# add-labels-to-issue v1
-The GitHub Action to add labels to issue or PR. This Action (written in JavaScript) wraps the "[Add labels to an issue](https://docs.github.com/en/rest/reference/issues#add-labels-to-an-issue)" REST API.
+# delete-labels-from-issue v1
+The GitHub Action to delete labels from issue or PR. This Action (written in JavaScript) wraps the "[Delete labels from an issue](https://octokit.github.io/rest.js/v18#issues-delete-label)" REST API.
 
 ## Inputs
 ### 1. `repository`
@@ -8,7 +8,7 @@ The GitHub Action to add labels to issue or PR. This Action (written in JavaScri
 #### Default: `${{ github.repository }}`
 
 #### Description:
-The name of the repository which the issue or PR is in. E.g. '**ActionsRML/add-labels-to-issue**'.
+The name of the repository which the issue or PR is in. E.g. '**IlyaMurashkaSharekey/delete-labels-to-issue**'.
 
 
 ### 2. `issue_number`
@@ -24,7 +24,7 @@ The number of the issue or PR. <BR/>When no issue/PR number provided, the value 
 #### Required: YES
 
 #### Description:
-The labels you want to add. You can provide one or more labels.
+The labels you want to delete. You can provide one or more labels.
 
 
 ### 4. `token`
@@ -36,27 +36,27 @@ Personal access token (PAT) used to authenticate.
 
 
 ## Example workflows
-### Add a single label
+### Delete a single label
 ```yaml
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:      
-      - name: Add labels
-        uses: ActionsRML/add-labels-to-issue@v1
+      - name: Delete labels
+        uses: IlyaMurashkaSharekey/delete-labels-from-issue@v1
         with:
           issue_number: 5
           labels: label-01
 ```
 
-### Add multiple labels
+### Delete multiple labels
 ```yaml
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:      
-      - name: Add labels
-        uses: ActionsRML/add-labels-to-issue@v1
+      - name: Delete labels
+        uses: IlyaMurashkaSharekey/delete-labels-from-issue@v1
         with:
           issue_number: 5
           labels: |
@@ -65,7 +65,3 @@ jobs:
 ```
 ##
 
-
-## License
-The scripts and documentation in this project are released under the [MIT License](https://github.com/ActionsRML/add-labels-to-issue/blob/master/LICENSE) .
-##

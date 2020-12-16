@@ -1,10 +1,9 @@
-name: 'Add labels to issue or PR'
-description: 'An action to add labels to issue or PR.'
-author: 'Bright Ran'
+name: 'Delete labels from issue or PR'
+description: 'An action to delete labels from issue or PR.'
 
 inputs:
   repository:
-    description: 'The name of the repository which the issue or PR is in. For example, ActionsRML/add-labels-to-issue'
+    description: 'The name of the repository which the issue or PR is in. For example, IlyaMurashkaSharekey/delete-labels-from-issue'
     required: true
     default: ${{ github.repository }}
   issue_number:
@@ -12,7 +11,7 @@ inputs:
     required: true
     default: 'current'
   labels:
-    description: 'The labels to add.'
+    description: 'The labels to delete.'
     required: true
   token:
     description: 'The Personal access token (PAT) used to authenticate.'
